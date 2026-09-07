@@ -1,71 +1,34 @@
-# ==========================================================
-# Signal Clone - Root .gitignore
-# ==========================================================
-
-# Node & Frontend Dependencies
+# Dependencies
 node_modules/
-frontend/node_modules/
-.pnp
+/.pnp
 .pnp.js
 
+# Testing
+/coverage
+
 # Next.js Build Output
-.next/
-frontend/.next/
-out/
-frontend/out/
-build/
-dist/
+/.next/
+/out/
+/build
 
-# Python Bytecode & Environments
-__pycache__/
-backend/app/**/__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-.venv/
-backend/venv/
-backend/.venv/
-ENV/
-
-# Environment Variables & Secrets
-.env
-.env*.local
-.env.development
-.env.production
-*.env
-frontend/.env
-frontend/.env.local
-backend/.env
-
-# SQLite Databases
-*.db
-*.sqlite
-*.sqlite3
-backend/signal.db
-backend/*.db
-
-# Uploads & Media (Preserve folder structure)
-backend/uploads/*
-!backend/uploads/.gitkeep
-
-# Logs & Debug Output
-*.log
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# Testing & Coverage
-.coverage
-htmlcov/
-.pytest_cache/
+# Environment files
+.env
+.env*.local
+.env.development
+.env.production
 
-# OS & IDE Metadata
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+
+# OS metadata
 .DS_Store
 Thumbs.db
-.vscode/
-.idea/
-*.tsbuildinfo
