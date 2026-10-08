@@ -48,8 +48,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount Uploads directory
-uploads_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "uploads")
+# Mount uploads from a writable path on Vercel; keep the repository path in local development.
+_local_uploads_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "uploads")
+uploads_path = os.environ.get("UPLOAD_DIR") or ("/tmp/uploads" if os.environ.get("VERCEL") else _local_uploads_path)
 os.makedirs(uploads_path, exist_ok=True)
 app.mount("/uploads", StaticFiles(directory=uploads_path), name="uploads")
 
