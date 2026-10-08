@@ -7,7 +7,8 @@ from app.auth.security import get_current_user
 
 router = APIRouter(prefix="/api/upload", tags=["Uploads"])
 
-UPLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "uploads")
+_LOCAL_UPLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "uploads")
+UPLOAD_DIR = os.environ.get("UPLOAD_DIR") or ("/tmp/uploads" if os.environ.get("VERCEL") else _LOCAL_UPLOAD_DIR)
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 @router.post("")
