@@ -2,6 +2,14 @@
 
 A high-fidelity, privacy-first **Signal Clone** built with **Next.js 14 (TypeScript)** on the frontend, **FastAPI (Python)** on the backend, **SQLite with SQLAlchemy** for relational persistence, **FastAPI WebSockets** for live messaging, and **WebRTC** for real camera and microphone voice & video calls.
 
+## 🌐 Live Demo
+
+- **Frontend:** [Signal Clone](https://signal-clone-nine-lac.vercel.app/)
+- **Backend API:** [signal-clone-api.vercel.app](https://signal-clone-api.vercel.app/)
+- **API documentation:** [Swagger UI](https://signal-clone-api.vercel.app/docs)
+- **Health endpoint:** [Health check](https://signal-clone-api.vercel.app/health)
+
+
 ---
 
 ## 📸 Visual Design Language
